@@ -1,21 +1,24 @@
+<?php
+$title = "Home Page";
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Online Resume</title>
+    <title><?php echo $title; ?></title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<?php require("header.php"); ?>
+<?php require("includes/header.php"); ?>
+<?php include("includes/nav.php"); ?>
 
-<?php include("career.php"); ?>
-<?php include("personal.php"); ?>
-<?php include("education.php"); ?>
-<?php include("skills.php"); ?>
-<?php include("affiliation.php"); ?>
-<?php include("work.php"); ?>
+<div class="section">
+    <h2>Welcome</h2>
+    <p>This is my online resume. Use the menu to navigate.</p>
+</div>
 
-<?php include("footer.php"); ?>
+<?php require("includes/footer.php"); ?>
 
 </body>
 </html>
