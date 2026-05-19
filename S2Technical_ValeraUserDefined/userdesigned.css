@@ -1,0 +1,40 @@
+body {
+    font-family: "Times New Roman", serif;
+    text-align: center;
+}
+
+/* TABLE */
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 80%;
+    margin-top: 20px;
+    border: 2px solid black;
+}
+
+/* CELLS */
+th,
+td {
+    border: 1px solid black;
+    padding: 6px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* TITLE */
+th[colspan="3"] {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #f2f2f2;
+}
+
+/* HEADER ROW */
+tr:nth-child(2) th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* REMOVE EXTRA COLORS */
+td {
+    background-color: white;
+}
