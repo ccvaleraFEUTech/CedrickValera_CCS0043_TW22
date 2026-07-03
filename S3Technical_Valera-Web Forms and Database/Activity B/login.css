@@ -1,0 +1,54 @@
+body{
+    background-color:#eef2f5;
+    font-family:Verdana, sans-serif;
+}
+
+.login-box{
+    width:380px;
+    margin:70px auto;
+    background:#ffffff;
+    padding:25px;
+    border:2px solid #d6d6d6;
+    border-radius:10px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #b5b5b5;
+}
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:10px;
+    background:#1976d2;
+    color:white;
+    border:none;
+}
+
+button:hover{
+    background:#145da0;
+}
+
+.message{
+    text-align:center;
+    color:red;
+    margin-top:15px;
+}
+
+.footer{
+    text-align:center;
+    margin-top:20px;
+}
