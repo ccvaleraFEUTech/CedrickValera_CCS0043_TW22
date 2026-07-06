@@ -18,6 +18,13 @@ if(isset($_POST['submit']))
     if($_POST['username'] == $registeredUser &&
        $_POST['password'] == $registeredPassword)
     {
+        if(isset($_POST['rememberUser']))
+        {
+            
+            setcookie("savedUser", $_POST['username'], time() + 3600);
+            setcookie("savedPass", $_POST['password'], time() + 3600);
+        }
+
         $_SESSION['account_name'] = $_POST['username'];
 
         header("Location: home.php");
@@ -30,6 +37,8 @@ if(isset($_POST['submit']))
 }
 
 ?>
+    <!--Code Modified above, added cookie handling -->
+
 
 <!DOCTYPE html>
 <html>
@@ -49,11 +58,19 @@ echo htmlspecialchars($loginMessage);
 <form method="POST">
 
     Username:<br>
-    <input type="text" name="username">
+    <input type="text" name="username"
+    value="<?php if(isset($_COOKIE['savedUser'])) echo htmlspecialchars($_COOKIE['savedUser']); ?>">
     <br><br>
 
     Password:<br>
-    <input type="password" name="password">
+    <input type="password" name="password"
+    value="<?php if(isset($_COOKIE['savedPass'])) echo htmlspecialchars($_COOKIE['savedPass']); ?>">
+    <br><br>
+
+    <input type="checkbox" name="rememberUser"
+    <?php if(isset($_COOKIE['savedUser'])) echo "checked"; ?>>
+    Remember Account
+
     <br><br>
 
     <input type="submit" name="submit" value="Login">
